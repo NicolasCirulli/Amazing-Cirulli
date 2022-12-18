@@ -27,7 +27,6 @@ fetch('https://amazing-events.onrender.com/api/events')
                 estadisticas[fecha][categoria].porcentaje += porcentaje
                 estadisticas[fecha][categoria].count += 1
             }
-        
             if(estadisticas.masCapacidad.capacity < evento.capacity){
                 estadisticas.masCapacidad.capacity = evento.capacity
                 estadisticas.masCapacidad.nombre = evento.name

@@ -3,16 +3,15 @@ export function filtrar(eventos, value){
     return eventos.filter( evento => (checked.includes( evento.category) || checked.length === 0) && evento.name.toLowerCase().includes( value.toLowerCase() ) )
 }
 
-export function render(template, elemento){
-    elemento.innerHTML = template
-}
+export const render = (template, elemento) => elemento.innerHTML = template
+
 
 export function crearCheckBoxes(categorias){
     let template = ''
     for( let categoria of categorias){
         template += `
         <input type="checkbox" class="btn-check" value="${categoria}" id="check-${categoria.replace(' ','-')}" autocomplete="off">
-        <label class="btn btn-secondary" for="check-${categoria.replace(' ','-')}">${categoria}</label>
+        <label class="btn btn-secondary fw-bold" for="check-${categoria.replace(' ','-')}">${categoria}</label>
         `
     }
     return template
