@@ -34,3 +34,17 @@ export function crearCards(events){
     }
     return template
 }
+
+export function renderTabla (data, tabla){
+    let template = ''
+    for(let categoria in data){
+        template += `
+        <tr>
+            <td>${categoria}</td>
+            <td>${data[categoria].revenues}</td>
+            <td>${data[categoria].porcentaje / data[categoria].count}</td>
+        </tr>
+        `
+    }
+    tabla.innerHTML += template
+}
