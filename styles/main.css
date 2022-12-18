@@ -3,7 +3,12 @@
     padding: 0;
     box-sizing: border-box;
 }
-
+.bg__btn{
+    background-color: rgba(62, 22, 46, 0.862);
+    color: rgb(255, 255, 255);
+    font-size: 1rem;
+    font-weight: bold;
+}
 body{
     min-height: 100vh;
     background-color: rgb(62, 22, 46);
