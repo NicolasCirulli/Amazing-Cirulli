@@ -31,13 +31,15 @@ fetch('https://amazing-events.onrender.com/api/events')
                 estadisticas.masCapacidad.capacity = evento.capacity
                 estadisticas.masCapacidad.nombre = evento.name
             }
-            if(estadisticas.porcentajeMasAlto.porcentaje < porcentaje){
-                estadisticas.porcentajeMasAlto.porcentaje = porcentaje
-                estadisticas.porcentajeMasAlto.nombre = evento.name
-            }
-            if(estadisticas.porcentajeMasBajo.porcentaje > porcentaje || !estadisticas.porcentajeMasBajo.porcentaje ){
-                estadisticas.porcentajeMasBajo.porcentaje = porcentaje
-                estadisticas.porcentajeMasBajo.nombre = evento.name
+            if(fecha == 'past'){
+                if(estadisticas.porcentajeMasAlto.porcentaje < porcentaje){
+                    estadisticas.porcentajeMasAlto.porcentaje = porcentaje
+                    estadisticas.porcentajeMasAlto.nombre = evento.name
+                }
+                if(estadisticas.porcentajeMasBajo.porcentaje > porcentaje || !estadisticas.porcentajeMasBajo.porcentaje ){
+                    estadisticas.porcentajeMasBajo.porcentaje = porcentaje
+                    estadisticas.porcentajeMasBajo.nombre = evento.name
+                }
             }
         
             return estadisticas
