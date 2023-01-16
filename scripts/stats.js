@@ -10,7 +10,7 @@ let estructura = {
     past: {}
 }
 
-fetch('https://amazing-events.onrender.com/api/events')
+fetch('https://mindhub-xj03.onrender.com/api/amazing')
     .then( res => res.json() )
     .then( ( { events, currentDate } ) => {
         const fn = (estadisticas, evento) => {
