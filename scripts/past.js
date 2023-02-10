@@ -3,7 +3,7 @@ const main = document.getElementById('main-js')
 const search = document.getElementById('search-js')
 const checkboxes = document.getElementById('checkboxes-js')
 let eventos;
-fetch('https://amazing-events.onrender.com/api/events')
+fetch('https://mindhub-xj03.onrender.com/api/amazing')
     .then( res => res.json() )
     .then( ( { events, currentDate} ) => {
         eventos = events.filter( event => event.date < currentDate )

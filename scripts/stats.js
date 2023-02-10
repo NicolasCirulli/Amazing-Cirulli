@@ -50,8 +50,8 @@ fetch('https://mindhub-xj03.onrender.com/api/amazing')
 
         tablaUno.innerHTML += `
             <tr>
-                <td>${stats.porcentajeMasAlto.nombre} %${stats.porcentajeMasAlto.porcentaje}</td>
-                <td>${stats.porcentajeMasBajo.nombre} %${stats.porcentajeMasBajo.porcentaje}</td>
+                <td>${stats.porcentajeMasAlto.nombre} ${stats.porcentajeMasAlto.porcentaje} %</td>
+                <td>${stats.porcentajeMasBajo.nombre} ${stats.porcentajeMasBajo.porcentaje} %</td>
                 <td>${stats.masCapacidad.nombre} ${stats.masCapacidad.capacity}</td>
             </tr>
         `

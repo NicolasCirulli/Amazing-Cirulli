@@ -41,7 +41,7 @@ export function renderTabla (data, tabla){
         <tr>
             <td>${categoria}</td>
             <td>${data[categoria].revenues}</td>
-            <td>${data[categoria].porcentaje / data[categoria].count}</td>
+            <td>${(data[categoria].porcentaje / data[categoria].count).toFixed(2)} %</td>
         </tr>
         `
     }

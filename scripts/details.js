@@ -3,7 +3,7 @@ const titulo = document.getElementById('titulo')
 const main = document.getElementById('main-js')
 const params = new URLSearchParams(location.search)
 const id = params.get('id')
-fetch('https://amazing-events.onrender.com/api/events')
+fetch('https://mindhub-xj03.onrender.com/api/amazing')
     .then( res => res.json() )
     .then( ( { events } ) => {
         let evento = events.find( event => event._id === id )
