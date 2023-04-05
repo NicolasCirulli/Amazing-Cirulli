@@ -6,7 +6,7 @@ const id = params.get('id')
 fetch('https://mindhub-xj03.onrender.com/api/amazing')
     .then( res => res.json() )
     .then( ( { events } ) => {
-        let evento = events.find( event => event._id === id )
+        let evento = events.find( event => event._id == id )
         console.log(evento)
         document.title += ` - ${evento.name}`
         titulo.innerHTML = evento.name
