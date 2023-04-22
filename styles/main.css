@@ -13,9 +13,7 @@ body{
     min-height: 100vh;
     background-color: rgb(62, 22, 46);
 }
-main{
-    min-height: 35vh;
-}
+
 
 .logo__navbar{
     padding-left: 1rem;

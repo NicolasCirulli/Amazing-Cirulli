@@ -19,13 +19,14 @@ export function crearCheckBoxes(categorias){
 
 export function crearCards(events){
     let template = ''
-    for( let {image, name, price, _id:id} of events){
+    for( let {image, name, price, _id:id, category} of events){
         template += `
             <div class="card border-secondary pt-3 col-10 col-md-5 col-xl-3">
                     <img class="card-img-top w-100 h-50" src="${image}" alt="Title">
                     <div class="card-body d-flex flex-column">
                     <h4 class="card-title">${name}</h4>
                     <p class="card-text">Price : ${price}</p>
+                    <p class="card-text">Category : ${category}</p>
                     <a href="./details.html?id=${id}" class="btn btn-secondary col-4 align-self-center">Details</a>
                     </div>
             </div>
@@ -38,9 +39,9 @@ export function renderTabla (data, tabla){
     let template = ''
     for(let categoria in data){
         template += `
-        <tr>
+        <tr class="text-center">
             <td>${categoria}</td>
-            <td>${data[categoria].revenues}</td>
+            <td>$ ${data[categoria].revenues.toLocaleString()}</td>
             <td>${(data[categoria].porcentaje / data[categoria].count).toFixed(2)} %</td>
         </tr>
         `

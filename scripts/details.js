@@ -11,7 +11,7 @@ fetch('https://mindhub-xj03.onrender.com/api/amazing')
         document.title += ` - ${evento.name}`
         titulo.innerHTML = evento.name
         main.innerHTML = `
-            <div class="card border-secondary px-2 py-3 m-3 d-flex col-11 flex-row flex-wrap">
+            <div class="card border-secondary px-2 py-3 mx-3 d-flex col-11 flex-row flex-wrap">
                 <img class="card-img-top ancho" src="${evento.image}" alt="Title">
                 <div class="card-body d-flex flex-column ancho">
                 <h4 class="card-title">${evento.name}</h4>
